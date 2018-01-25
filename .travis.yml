@@ -11,4 +11,7 @@ node_js:
 
 script:
   - yarn test -- --coverage
-  - yarn deploy
+  - git config user.name "teofpqy"
+  - git config user.email "teofpqy@outlook.com"
+  - yarn build
+  - gh-pages -d build -r "https://${GH_token}@${GH_repo}"
