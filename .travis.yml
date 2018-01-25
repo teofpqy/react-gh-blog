@@ -11,12 +11,4 @@ node_js:
 
 script:
   - yarn test -- --coverage
-  - yarn build
-
-deploy:
-  provider: pages
-  skip-clean: true
-  github-token: f5b88529d304a71bdcf93c114e0686304b001587
-  keep-history: true
-  on:
-    branch: master
+  - yarn deploy
