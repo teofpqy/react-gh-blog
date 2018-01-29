@@ -1,17 +1,17 @@
 language: node_js
 cache: yarn
-
 notifications:
   email:
     on_success: never
     on_failure: always
-
 node_js:
-  - '8'
-
+- '8'
 script:
-  - yarn test -- --coverage
-  - git config user.name "teofpqy"
-  - git config user.email "teofpqy@outlook.com"
-  - yarn build
-  - gh-pages -d build -r "https://${GH_token}@${GH_repo}"
+- yarn test -- --coverage
+- git config user.name "teofpqy"
+- git config user.email "teofpqy@outlook.com"
+- yarn build
+- gh-pages -d build -r "https://${GH_token}@${GH_repo}"
+env:
+  matrix:
+    secure: Br96Ayg9BN/T8NSYIBGto6NsvFuJiligYkqTr6jfuwArpp5DIFqz+k5j6v3Exh3ZEh6wT/7TGkJ8TbuROppo3E5EsNKYFX5Qtp4sn7euvLYsBPcLUEjul0p32WBWSdT+XO3u1YFzpQS0EvuP5jkS9U0Xu3WwSJgocNnrBn2VIdCDZwsIFqHHauWWFh32ujX9bQuv2U2f8MKpzd8B+7P0m0D6OGG813fcPnMfxAN/NnS7pSiOMYP9OmIPCDam1bNb6K5kWC6wUn7fUZEwoMWlNeEoCiTtwxO5IXzIh9W5hM4QBr6sCWaHnp6g9ov65gCAxf4LyqQUOiSu7BDt42NOtWaKcEW4SvV9lDmt0ymKJaav1QBZ2r5Did7LiU2up/s7nqXG+u59vDOiWLZSJhNhHFdJB2wUlGGlmBgdmoWrF8MUz9BKp+4NEsQ4GAT1gv8lOLOS+uq0f6fjZePngvFurRUPMnx1DK+B7XffJ9xf9l5QNIaTdRDFqc3w6+qwubb51t+tr3vS3NwPXpj1XgvYhRL/5okh7iExoT8t+Mk1P+k/R5q1Hz44eGU3DtC8xmz8i7cRuIZk43u2LGs2qeCnrI4EleltQuJdr7Rd8DiY/Ke+E8BBdYQytCftB0aGvaw63vW98d/RKcQZws3xQu2irX0nz2CL5IxYPhUr4J09TZE=
